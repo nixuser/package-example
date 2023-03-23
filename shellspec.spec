@@ -3,7 +3,7 @@ Version:        0.28.1
 Release:        1%{?dist}
 Summary:        BDD unit testing framework for shell
 
-License:        GPL
+License:        MIT
 Source0:        %{name}-%{version}.tar.gz      
 Source1:        stub.tar.gz      
 

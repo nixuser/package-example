@@ -7,12 +7,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: get workd dir list
-      run: pwd; ls
-
     - name: build RPM package
-      id: rpm
-      run: docker run --rm -v "$PWD/package-example/:/pkg" -w /pkg docker.io/rockylinux:9 bash ./package.sh
+      run: docker run --rm -v "$PWD:/pkg" -w /pkg docker.io/rockylinux:9 bash ./package.sh
 
     - name: list packages
       run: ls ./*rpm

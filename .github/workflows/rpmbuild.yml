@@ -12,6 +12,7 @@ jobs:
     - name: build RPM package
       run: docker run --rm -v "$PWD:/pkg" -w /pkg docker.io/rockylinux:9 bash ./package.sh
 
-    - uses: actions/upload-artifact@v3
+    - name: Store RPM package
+      uses: actions/upload-artifact@v3
       with:
         path: ./shellspec*.rpm
